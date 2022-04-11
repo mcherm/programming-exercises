@@ -1,2 +1,2 @@
 # programming-exercises
-Exercises for teaching programming
+Exercises for teaching programming.
