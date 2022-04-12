@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xl="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="89 138 372 279" width="372" height="279">
+    <defs>
+        <font-face font-family="Georgia" font-size="20" panose-1="2 4 5 2 5 4 5 2 3 3" units-per-em="1000" underline-position="-88.37891" underline-thickness="49.316406" slope="0" x-height="481.4453" cap-height="692.8711" ascent="916.9922" descent="-219.23828" font-weight="400">
+            <font-face-src>
+                <font-face-name name="Georgia"/>
+            </font-face-src>
+        </font-face>
+    </defs>
+    <metadata> Produced by OmniGraffle 7.18.1\n2020-12-09 22:10:30 +0000</metadata>
+    <g id="Canvas_1" stroke-opacity="1" fill-opacity="1" stroke="none" stroke-dasharray="none" fill="none">
+        <title>Canvas 1</title>
+        <rect fill="white" x="89" y="138" width="372" height="279"/>
+        <g id="Canvas_1_Layer_1">
+            <title>Layer 1</title>
+            <g id="Group_26">
+                <g id="Graphic_2">
+                    <circle cx="189" cy="220" r="18.5000312375684" fill="white"/>
+                    <circle cx="189" cy="220" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(179.2 209)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="3.0910168" y="18">A</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_3">
+                    <circle cx="285.7" cy="210.9" r="18.5000312375684" fill="white"/>
+                    <circle cx="285.7" cy="210.9" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(275.9 199.9)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="3.2619152" y="18">B</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_4">
+                    <circle cx="343.1" cy="272.3" r="18.5000312375684" fill="white"/>
+                    <circle cx="343.1" cy="272.3" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(333.3 261.3)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="3.3791027" y="18">C</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_5">
+                    <circle cx="331" cy="348.5" r="18.5000312375684" fill="white"/>
+                    <circle cx="331" cy="348.5" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(321.2 337.5)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="2.3097668" y="18">D</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_6">
+                    <circle cx="238.3" cy="303.5" r="18.5000312375684" fill="white"/>
+                    <circle cx="238.3" cy="303.5" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(228.5 292.5)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="3.266798" y="18">E</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_7">
+                    <circle cx="246.75" cy="372" r="18.5000312375684" fill="white"/>
+                    <circle cx="246.75" cy="372" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(236.95 361)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="3.80879" y="18">F</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_8">
+                    <circle cx="133.5" cy="286" r="18.5000312375684" fill="white"/>
+                    <circle cx="133.5" cy="286" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(123.7 275)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="2.5490246" y="18">G</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_9">
+                    <circle cx="158.5" cy="352.5" r="18.5000312375684" fill="white"/>
+                    <circle cx="158.5" cy="352.5" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(148.7 341.5)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="1.650587" y="18">H</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_10">
+                    <circle cx="415.7" cy="307.3" r="18.5000312375684" fill="white"/>
+                    <circle cx="415.7" cy="307.3" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(405.9 296.3)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="5.903517" y="18">I</tspan>
+                    </text>
+                </g>
+                <g id="Graphic_11">
+                    <circle cx="373.1" cy="208.5" r="18.5000312375684" fill="white"/>
+                    <circle cx="373.1" cy="208.5" r="18.5000312375684" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <text transform="translate(363.3 197.5)" fill="black">
+                        <tspan font-family="Georgia" font-size="20" font-weight="400" fill="black" x="4.62422" y="18">J</tspan>
+                    </text>
+                </g>
+                <g id="Line_12">
+                    <line x1="208.41475" y1="218.17297" x2="266.28525" y2="212.72704" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_13">
+                    <line x1="198.91652" y1="236.79572" x2="228.3835" y2="286.70428" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_14">
+                    <line x1="176.44908" y1="234.92542" x2="146.05092" y2="271.07458" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_15">
+                    <path d="M 205.25004 209.2142 C 345.3848 120.53238 444.00337 171.09256 420.4119 288.37483" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_16">
+                    <line x1="299.0169" y1="225.14492" x2="329.7831" y2="258.0551" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_17">
+                    <line x1="305.1927" y1="210.36473" x2="353.6073" y2="209.03527" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_18">
+                    <line x1="340.04165" y1="291.5601" x2="334.05836" y2="329.2399" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_19">
+                    <line x1="255.8471" y1="312.018" x2="313.4529" y2="339.982" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_20">
+                    <line x1="152.7352" y1="289.21198" x2="219.06481" y2="300.288" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_21">
+                    <line x1="265.5363" y1="366.7599" x2="312.2137" y2="353.7401" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_22">
+                    <line x1="407.97717" y1="289.38882" x2="380.82285" y2="226.4112" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_23">
+                    <path d="M 250.9367 288.6473 C 266.7146 271.64802 286.14173 255.5454 306.08004 242.08538 C 302.54485 236.6308 313.4554 229.5595 316.9906 235.01407 C 329.88314 227.00244 342.75098 220.21835 354.7561 215.12806" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_24">
+                    <line x1="398.1597" y1="315.832" x2="348.5403" y2="339.968" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                <g id="Line_25">
+                    <line x1="364.80003" y1="226.15128" x2="351.4" y2="254.64873" stroke="black" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

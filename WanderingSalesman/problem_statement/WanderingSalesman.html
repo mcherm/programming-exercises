@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset=""UTF-8">
+    <title>The Wandering Salesman</title>
+</head>
+<body>
+    <h1>The Wandering Salesman</h1>
+    <p>The goal of this exercise is to experiment with a tiny piece of code and try to discover algorithmic improvements.</p>
+    <p>
+        You've probably heard of <a href="https://en.wikipedia.org/wiki/Travelling_salesman_problem">the traveling
+        salesman problem</a>: a salesman has a map of different cities some of which are connected buy roads of
+        different lengths and is trying to find the optimal route to reach them all. It is known to be an NP-Hard
+        problem. This exercise is NOT that problem (although it is named in honor of it) -- what we are going to
+        tackle will be called the "<i>Wandering</i> Salesman".
+    </p>
+    <p>
+        Just as with the Traveling Salesman, we will start with a map of locations, some of which are connected. To
+        give a specific, small example here is a picture we can work with:
+    </p>
+    <img src="illustration.svg" alt="Map Diagram">
+    <p>
+        In the traveling salesman problem they ask for the shortest route to visit all locations. In the Wandering
+        Salesman problem we will try to find how MANY different routes there are of a given length, starting from a
+        specific starting location.
+    </p>
+    <p>
+        For example, starting at point <b>F</b>, the salesman can plan four different routes that touch three cities:
+    </p>
+    <ul>
+        <li><b>F</b> - <b>D</b> - <b>C</b></li>
+        <li><b>F</b> - <b>D</b> - <b>E</b></li>
+        <li><b>F</b> - <b>D</b> - <b>I</b></li>
+        <li><b>F</b> - <b>D</b> - <b>F</b></li>
+    </ul>
+    <p>
+        Notice that one of these routes goes back on itself -- that's perfectly fine. Also notice that the count
+        is different depending on where you start from. Starting from <b>F</b> gives an unusually low count because
+        there are so few choices for the first step. (The lowest count of all would start from <b>H</b> -- there are
+        zero routes of length 3 that start at <b>H</b>.)
+    </p>
+    <p>
+        Your assignment is to write a program that will take, as input, a graph, a starting location, and route length.
+        It will count the number of possible routes.
+    </p>
+    <p>
+        There are a few different ways one might want to input a graph, so to make it easy we are providing an
+        input file that describes the graph pictured above in a couple different formats. The input file is found
+        in <i><a href="../inputdata/small-map.json">small-map.json</a></i>. This JSON file describes the same map
+        in a few different formats -- use whichever one seems most convenient.
+    </p>
+    <p>
+        You probably also want to check your work. To support that, we've provided an input file that contains
+        the correct answers for various inputs. The input file is in
+        <i><a href="../expected-output.json">expected-output.json</a></i>. This JSON file contains lots of possible
+        information; to start with, consider the "paths" section when verifying your program.
+    </p>
+</body>
+</html>
