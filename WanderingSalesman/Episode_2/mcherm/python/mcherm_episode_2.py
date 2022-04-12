@@ -11,7 +11,7 @@ map_data = json.load(open("../../../inputdata/small-map.json"))
 def count_paths(start_position, num_steps):
     """Returns a count of paths."""
     if num_steps < 1:
-        return ValueError("Path must have at least one step.")
+        raise ValueError("Path must have at least one step.")
     elif num_steps == 1:
         return 1
     else:
