@@ -16,9 +16,9 @@ function countPaths(startNode, length) {
     // --- work out the answer ---
     let answer;
     if (length === 1) {
-        answer = 1;
+        answer = BigInt(1);
     } else {
-        answer = 0;
+        answer = BigInt(0);
         for (const neighbor of mapData.neighbors[startNode]) {
             answer += countPaths(neighbor, length - 1);
         }
@@ -32,7 +32,6 @@ function countPaths(startNode, length) {
 }
 
 
-const pathLen = 40;
+const pathLen = 5012;
 const pathCount = countPaths("A", pathLen);
 console.log(`For length ${pathLen} there are ${pathCount} paths.`);
-
