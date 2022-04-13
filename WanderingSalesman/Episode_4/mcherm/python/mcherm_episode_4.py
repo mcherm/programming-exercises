@@ -5,6 +5,7 @@
 #
 
 import json
+import time
 
 map_data = json.load(open("../../../inputdata/small-map.json"))
 
@@ -21,6 +22,10 @@ def count_paths(start_position, num_steps):
     return paths_from_here[start_position]
 
 
-path_len = 500000
+path_len = 200000
+start_time = time.time()
 path_count = count_paths("A", path_len)
+end_time = time.time()
 print(f"For paths of length {path_len} there are {path_count} paths.")
+seconds = end_time - start_time
+print(f"Taking {seconds} seconds.")
