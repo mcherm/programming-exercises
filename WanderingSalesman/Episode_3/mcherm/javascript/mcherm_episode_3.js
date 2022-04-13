@@ -1,5 +1,5 @@
 //
-// Implementation of Episode 2 of the Wandering Salesman problem
+// Implementation of Episode 3 of the Wandering Salesman problem
 //
 
 const fs = require('fs')

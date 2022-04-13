@@ -22,4 +22,5 @@ Recursion Limit: (#3)
 
 Reasonable Execution time (#4):
     Java: soft limit around 200000.
+    JavaScript: soft limit around 300000.
     Python: soft limit around 200000.
