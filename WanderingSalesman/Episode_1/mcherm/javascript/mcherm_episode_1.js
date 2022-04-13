@@ -21,7 +21,7 @@ function listPaths(startNode, length) {
     }
 }
 
-const pathLen = 13;
+const pathLen = 14;
 const pathList = listPaths("A", pathLen);
 console.log(pathList);
 console.log(`For length ${pathLen} there are ${pathList.length} paths.`);

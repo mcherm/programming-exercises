@@ -1,0 +1,22 @@
+Limits:
+
+Build List Limit:
+    Java: soft limit around 14.
+    JavaScript: soft limit around 14.
+    Python: soft limit around 13.
+
+Count w/o caching:
+    Java: soft limit around 18.
+    JavaScript: soft limit around 18.
+    Python: soft limit around 15.
+
+Bigint Limit:
+    Java: bigint limit after 36 if using long; after 21 if using int.
+    JavaScript: bigint limit after 40.
+    Python: no limit.
+
+Recursion Limit:
+    Java: recursion limit after 6510.
+    JavaScript:
+    Python: recursion limit after 333.
+

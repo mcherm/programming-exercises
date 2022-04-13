@@ -18,7 +18,7 @@ function countPaths(startNode, length) {
     }
 }
 
-const pathLen = 17;
+const pathLen = 18;
 const pathCount = countPaths("A", pathLen);
 console.log(`For length ${pathLen} there are ${pathCount} paths.`);
 
