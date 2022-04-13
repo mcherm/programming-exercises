@@ -9,12 +9,6 @@ const mapData = JSON.parse(fs.readFileSync("../../../inputdata/small-map.json"))
 function listPaths(startNode, length) {
     if (length === 1) {
         return [[startNode]]
-    } else if (length === 2) {
-        const paths = [];
-        for (const neighbor of mapData.neighbors[startNode]) {
-            paths.push( [startNode, neighbor] );
-        }
-        return paths;
     } else {
         const paths = [];
         for (const neighbor of mapData.neighbors[startNode]) {
