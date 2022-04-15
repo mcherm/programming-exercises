@@ -39,21 +39,16 @@ func getNeighbors(mapData interface{}, node string) []string {
 	return result
 }
 
-// Returns the list of paths (each path is a slice of strings) in the map mapData
-// that begin at node startPosition and have numSteps items.
-func getPaths(mapData interface{}, startPosition string, numSteps int) [][]string {
+// Returns the number of paths in the map mapData that begin at node startPosition
+// and have numSteps items.
+func countPaths(mapData interface{}, startPosition string, numSteps int) int {
 	if numSteps == 1 {
-		return [][]string{{startPosition}}
+		return 1
 	} else {
 		neighbors := getNeighbors(mapData, startPosition)
-		result := make([][]string, 0)
+		result := 0
 		for _, neighbor := range neighbors {
-			continuedPaths := getPaths(mapData, neighbor, numSteps-1)
-			for _, continuedPath := range continuedPaths {
-				newPath := []string{startPosition}
-				newPath = append(newPath, continuedPath...)
-				result = append(result, newPath)
-			}
+			result += countPaths(mapData, neighbor, numSteps-1)
 		}
 		return result
 	}
@@ -63,11 +58,9 @@ func main() {
 	var mapData = readMap()
 
 	startPosition := "A"
-	numSteps := 11
-	pathList := getPaths(mapData, startPosition, numSteps)
+	numSteps := 17
+	numPaths := countPaths(mapData, startPosition, numSteps)
 
 	// Perform work
-	fmt.Println("Paths:")
-	fmt.Println(pathList)
-	fmt.Printf("In %d steps there are %d paths.", numSteps, len(pathList))
+	fmt.Printf("In %d steps there are %d paths.", numSteps, numPaths)
 }

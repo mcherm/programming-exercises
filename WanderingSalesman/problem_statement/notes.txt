@@ -10,6 +10,7 @@ Count w/o caching: (#2)
     Java: soft limit around 18.
     JavaScript: soft limit around 18.
     Python: soft limit around 15.
+    Go: soft limit around 17.
 
 Bigint Limit: (#3)
     Java: bigint limit after 36 if using long; after 21 if using int.
