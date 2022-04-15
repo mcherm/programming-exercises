@@ -16,11 +16,13 @@ Bigint Limit: (#3)
     Java: bigint limit after 36 if using long; after 21 if using int.
     JavaScript: bigint limit after 31. (And at 32 the error is subtle... it's rounded off.)
     Python: no limit.
+    Go: bigint limit after 36.
 
 Recursion Limit: (#3)
     Java: recursion limit after 6510.
     JavaScript: recursion limit after 5012.
     Python: recursion limit after 333.
+    Go: recursion limit exists, but it's larger than 100000 which is a soft limit for time.
 
 Reasonable Execution time (#4):
     Java: soft limit around 200000.

@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math/big"
 )
 
 type CacheKey struct {
@@ -13,7 +14,7 @@ type CacheKey struct {
 }
 
 var mapData interface{}
-var cache map[CacheKey]int
+var cache map[CacheKey]big.Int
 
 func readMap() interface{} {
 	// Read file
@@ -49,7 +50,7 @@ func getNeighbors(node string) []string {
 
 // Returns the number of paths in the map mapData that begin at node startPosition
 // and have numSteps items.
-func countPaths(startPosition string, numSteps int) int {
+func countPaths(startPosition string, numSteps int) big.Int {
 	// --- check if it's in the cache ---
 	var cacheKey = CacheKey{startPosition: startPosition, numSteps: numSteps}
 	cachedValue, ok := cache[cacheKey]
@@ -58,16 +59,17 @@ func countPaths(startPosition string, numSteps int) int {
 	}
 
 	// --- it's not, so find the answer ---
-	var answer int
+	var answer big.Int
 	if numSteps == 1 {
-		answer = 1
+		answer.Set(big.NewInt(1))
 	} else {
 		neighbors := getNeighbors(startPosition)
-		result := 0
+		result := big.NewInt(0)
 		for _, neighbor := range neighbors {
-			result += countPaths(neighbor, numSteps-1)
+			pathsFromHere := countPaths(neighbor, numSteps-1)
+			result.Add(result, &pathsFromHere)
 		}
-		answer = result
+		answer.Set(result)
 	}
 
 	// --- add to cache and return ---
@@ -77,12 +79,12 @@ func countPaths(startPosition string, numSteps int) int {
 
 func main() {
 	mapData = readMap()
-	cache = make(map[CacheKey]int)
+	cache = make(map[CacheKey]big.Int)
 
 	startPosition := "A"
-	numSteps := 36
+	numSteps := 100000
 	numPaths := countPaths(startPosition, numSteps)
 
 	// Perform work
-	fmt.Printf("In %d steps there are %d paths.", numSteps, numPaths)
+	fmt.Printf("In %d steps there are %s paths.", numSteps, numPaths.Text(10))
 }
