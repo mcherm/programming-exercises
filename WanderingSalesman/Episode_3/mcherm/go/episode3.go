@@ -7,7 +7,13 @@ import (
 	"log"
 )
 
+type CacheKey struct {
+	startPosition string
+	numSteps      int
+}
+
 var mapData interface{}
+var cache map[CacheKey]int
 
 func readMap() interface{} {
 	// Read file
@@ -41,35 +47,42 @@ func getNeighbors(node string) []string {
 	return result
 }
 
-// Returns the list of paths (each path is a slice of strings) in the map mapData
-// that begin at node startPosition and have numSteps items.
-func getPaths(startPosition string, numSteps int) [][]string {
+// Returns the number of paths in the map mapData that begin at node startPosition
+// and have numSteps items.
+func countPaths(startPosition string, numSteps int) int {
+	// --- check if it's in the cache ---
+	var cacheKey = CacheKey{startPosition: startPosition, numSteps: numSteps}
+	cachedValue, ok := cache[cacheKey]
+	if ok {
+		return cachedValue
+	}
+
+	// --- it's not, so find the answer ---
+	var answer int
 	if numSteps == 1 {
-		return [][]string{{startPosition}}
+		answer = 1
 	} else {
 		neighbors := getNeighbors(startPosition)
-		result := make([][]string, 0)
+		result := 0
 		for _, neighbor := range neighbors {
-			continuedPaths := getPaths(neighbor, numSteps-1)
-			for _, continuedPath := range continuedPaths {
-				newPath := []string{startPosition}
-				newPath = append(newPath, continuedPath...)
-				result = append(result, newPath)
-			}
+			result += countPaths(neighbor, numSteps-1)
 		}
-		return result
+		answer = result
 	}
+
+	// --- add to cache and return ---
+	cache[cacheKey] = answer
+	return answer
 }
 
 func main() {
 	mapData = readMap()
+	cache = make(map[CacheKey]int)
 
 	startPosition := "A"
-	numSteps := 11
-	pathList := getPaths(startPosition, numSteps)
+	numSteps := 36
+	numPaths := countPaths(startPosition, numSteps)
 
 	// Perform work
-	fmt.Println("Paths:")
-	fmt.Println(pathList)
-	fmt.Printf("In %d steps there are %d paths.", numSteps, len(pathList))
+	fmt.Printf("In %d steps there are %d paths.", numSteps, numPaths)
 }

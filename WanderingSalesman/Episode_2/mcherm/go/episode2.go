@@ -7,6 +7,8 @@ import (
 	"log"
 )
 
+var mapData interface{}
+
 func readMap() interface{} {
 	// Read file
 	fileData, err := ioutil.ReadFile("inputdata/small-map.json")
@@ -26,7 +28,7 @@ func readMap() interface{} {
 }
 
 // Reads mapData to find the neighbors of a given node.
-func getNeighbors(mapData interface{}, node string) []string {
+func getNeighbors(node string) []string {
 	neighborMap := mapData.(map[string]interface{})["neighbors"]
 	neighborList := neighborMap.(map[string]interface{})[node]
 	neighborIs := neighborList.([]interface{})
@@ -41,25 +43,25 @@ func getNeighbors(mapData interface{}, node string) []string {
 
 // Returns the number of paths in the map mapData that begin at node startPosition
 // and have numSteps items.
-func countPaths(mapData interface{}, startPosition string, numSteps int) int {
+func countPaths(startPosition string, numSteps int) int {
 	if numSteps == 1 {
 		return 1
 	} else {
-		neighbors := getNeighbors(mapData, startPosition)
+		neighbors := getNeighbors(startPosition)
 		result := 0
 		for _, neighbor := range neighbors {
-			result += countPaths(mapData, neighbor, numSteps-1)
+			result += countPaths(neighbor, numSteps-1)
 		}
 		return result
 	}
 }
 
 func main() {
-	var mapData = readMap()
+	mapData = readMap()
 
 	startPosition := "A"
 	numSteps := 17
-	numPaths := countPaths(mapData, startPosition, numSteps)
+	numPaths := countPaths(startPosition, numSteps)
 
 	// Perform work
 	fmt.Printf("In %d steps there are %d paths.", numSteps, numPaths)
