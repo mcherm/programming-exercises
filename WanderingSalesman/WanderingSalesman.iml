@@ -12,6 +12,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Episode_2/mcherm/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Episode_3/mcherm/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Episode_4/mcherm/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Episode_5/mcherm/java" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
