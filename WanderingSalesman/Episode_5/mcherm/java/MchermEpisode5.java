@@ -7,9 +7,9 @@ import java.util.Map;
 import java.math.BigInteger;
 
 /**
- * Code for Episode 4 of the Wandering Salesman problem.
+ * Code for Episode 5 of the Wandering Salesman problem.
  *
- * Transform it to be iterative instead of recursive.
+ * Use binary exponentiation of matrices.
  */
 public class MchermEpisode5 {
 
