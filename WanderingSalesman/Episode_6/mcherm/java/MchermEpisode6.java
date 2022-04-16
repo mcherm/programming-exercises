@@ -2,19 +2,23 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.FileInputStream;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.math.BigInteger;
+import java.util.concurrent.*;
 
 /**
- * Code for Episode 5 of the Wandering Salesman problem.
+ * Code for Episode 6 of the Wandering Salesman problem.
  *
- * Use binary exponentiation of matrices.
+ * Use threads.
  */
-public class MchermEpisode5 {
+public class MchermEpisode6 {
 
     private static JsonNode mapData;
     private static Map<String, Integer> nodeToPosition;
+    private static ExecutorService threadPool;
 
 
     private static class Matrix {
@@ -66,12 +70,34 @@ public class MchermEpisode5 {
             assert other.numNodes == this.numNodes;
             final Matrix result = new Matrix(numNodes, null);
             for (int i = 0; i < numNodes; i++) {
+                final BigInteger[][] m1 = this.data;
+                final BigInteger[][] m2 = other.data;
+                final int iVal = i;
+                final List<Callable<BigInteger>> tasks = new ArrayList<>();
                 for (int j = 0; j < numNodes; j++) {
-                    BigInteger value = BigInteger.ZERO;
-                    for (int k = 0; k < numNodes; k++) {
-                        value = value.add(this.data[i][k].multiply(other.data[k][j]));
+                    final int jVal = j;
+                    tasks.add(() -> {
+                        BigInteger value = BigInteger.ZERO;
+                        for (int k = 0; k < numNodes; k++) {
+                            value = value.add(m1[iVal][k].multiply(m2[k][jVal]));
+                        }
+                        return value;
+                    });
+                }
+                final List<Future<BigInteger>> results;
+                try {
+                    results = threadPool.invokeAll(tasks);
+                } catch(InterruptedException err) {
+                    throw new RuntimeException("Thread was interrupted.");
+                }
+                for (int j = 0; j < numNodes; j++) {
+                    try {
+                        result.data[i][j] = results.get(j).get();
+                    } catch (InterruptedException e) {
+                        throw new RuntimeException("Thread was interrupted.");
+                    } catch (ExecutionException e) {
+                        throw new RuntimeException("Exception doing multiply.");
                     }
-                    result.data[i][j] = value;
                 }
             }
             return result;
@@ -154,6 +180,9 @@ public class MchermEpisode5 {
 
 
     public static void main(String[] args) throws Exception {
+        // --- Set up thread pool ---
+        threadPool = Executors.newFixedThreadPool(9);
+
         // --- Read the map data ---
         final FileInputStream in = new FileInputStream("./WanderingSalesman/inputdata/small-map.json");
         mapData = new ObjectMapper().readTree(in);
@@ -167,12 +196,15 @@ public class MchermEpisode5 {
         }
 
         // --- call the function and print results ---
-        final int pathLength = 1000000;
+        final int pathLength = 2000000;
         final long startTime = System.currentTimeMillis();
         BigInteger pathCount = countPaths("A", pathLength);
         final long endTime = System.currentTimeMillis();
         System.out.println("Considering paths of length " + pathLength + ", there are " + pathCount + " of them.");
         final long seconds = (endTime - startTime) / 1000;
         System.out.println("Taking " + seconds + " seconds.");
+
+        // --- shut down the thread pools ---
+        threadPool.shutdown();
     }
 }

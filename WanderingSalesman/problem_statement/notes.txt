@@ -33,3 +33,6 @@ Reasonable Execution time (#4):
 Reasonable Execution time (#5):
     Java: soft limit around 800000 (~30 seconds)
     Python: soft limit around 500000 (~30 seconds)
+
+Reasonable Execution time in parallel (#6):
+    Java: soft limit around 2000000 (~30 seconds)
