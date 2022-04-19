@@ -10,7 +10,7 @@ struct MapDescription {
 }
 
 
-fn load_map_description<'a>() -> Result<MapDescription, Box<dyn std::error::Error>> {
+fn load_map_description() -> Result<MapDescription, Box<dyn std::error::Error>> {
     let s = fs::read_to_string("../../../inputdata/small-map.json")?;
     let answer = serde_json::from_str(&s)?;
     return Ok(answer);
