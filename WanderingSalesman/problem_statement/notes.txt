@@ -5,6 +5,7 @@ Build List Limit: (#1)
     JavaScript: soft limit around 14.
     Python: soft limit around 13.
     Go: soft limit around 11.
+    Rust: soft limit around 14.
 
 Count w/o caching: (#2)
     Java: soft limit around 18.

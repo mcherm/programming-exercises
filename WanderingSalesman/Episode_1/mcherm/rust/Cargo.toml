@@ -1,0 +1,13 @@
+[package]
+name = "wandering_salesman"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "mcherm_episode_1"
+path = "mcherm_episode_1.rs"
+
+
+[dependencies]
+serde = { version = "1.0.117", features = ["derive"] }
+serde_json = "1.0.59"
