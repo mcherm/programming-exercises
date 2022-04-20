@@ -1,4 +1,5 @@
 **/__pycache__/*
 WanderingSalesman/out
 WanderingSalesman/.venv
-WanderingSalesman/Episode_1/mcherm/rust/target
+WanderingSalesman/rust/Cargo.lock
+WanderingSalesman/rust/target

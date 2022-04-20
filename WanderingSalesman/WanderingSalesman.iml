@@ -16,6 +16,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Episode_5/mcherm/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Episode_6/mcherm/java" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Episode_1/mcherm/rust/target" />
+      <excludeFolder url="file://$MODULE_DIR$/rust/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

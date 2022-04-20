@@ -5,8 +5,11 @@ edition = "2021"
 
 [[bin]]
 name = "mcherm_episode_1"
-path = "mcherm_episode_1.rs"
+path = "../Episode_1/mcherm/rust/mcherm_episode_1.rs"
 
+[[bin]]
+name = "mcherm_episode_2"
+path = "../Episode_2/mcherm/rust/mcherm_episode_2.rs"
 
 [dependencies]
 serde = { version = "1.0.117", features = ["derive"] }
