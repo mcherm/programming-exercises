@@ -33,6 +33,7 @@ Reasonable Execution time (#4):
     JavaScript: soft limit around 300000.
     Python: soft limit around 200000.
     Go: soft limit around 300000.
+    Rust: soft limit around 300000.
 
 Reasonable Execution time (#5):
     Java: soft limit around 800000 (~30 seconds)
