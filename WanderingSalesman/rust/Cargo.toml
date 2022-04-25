@@ -19,6 +19,10 @@ path = "../Episode_3/mcherm/rust/mcherm_episode_3.rs"
 name = "mcherm_episode_4"
 path = "../Episode_4/mcherm/rust/mcherm_episode_4.rs"
 
+[[bin]]
+name = "mcherm_episode_5"
+path = "../Episode_5/mcherm/rust/mcherm_episode_5.rs"
+
 
 [dependencies]
 serde = { version = "1.0.117", features = ["derive"] }
