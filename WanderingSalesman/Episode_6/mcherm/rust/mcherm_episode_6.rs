@@ -3,6 +3,7 @@ use serde::Deserialize;
 use serde_json;
 use rug::Integer;
 use std::time::Instant;
+use rayon::prelude::*;
 
 
 #[allow(non_snake_case)]
@@ -30,7 +31,7 @@ fn matrix_multiply(m1: &Matrix, m2: &Matrix) -> Matrix {
     assert!(m1.len() == m1[0].len() && m1.len() == m2.len());
     let size = m1.len();
 
-    let answer = (0..size).map(|i| {
+    let answer = (0..size).into_par_iter().map(|i| {
         (0..size).map(|j| {
             (0..size).map(|k| &m1[i][k] * &m2[k][j]).sum()
         }).collect()
@@ -100,11 +101,10 @@ fn count_paths<'a>(map: &'a MapDescription, start_position: Node<'a>, num_steps:
 }
 
 
-
 fn main() -> Result<(), Box<dyn std::error::Error>> {
     let map = load_map_description()?;
 
-    let path_len = 2500000;
+    let path_len = 10000000;
     let start_time = Instant::now();
     let path_count = count_paths(&map, &"A", path_len);
     let execute_seconds = start_time.elapsed().as_secs();

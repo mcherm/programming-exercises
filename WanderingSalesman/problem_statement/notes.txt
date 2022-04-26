@@ -44,3 +44,4 @@ Reasonable Execution time (#5):
 Reasonable Execution time in parallel (#6):
     Java: soft limit around 2000000 (~30 seconds)
     JavaScript: soft limit around 2500000 (~30 seconds)
+    Rust: soft limit around 10000000 (~30 seconds and yes, that's 10 million)
