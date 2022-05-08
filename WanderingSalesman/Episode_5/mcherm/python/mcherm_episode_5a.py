@@ -1,5 +1,5 @@
 #
-# Solution to the Wandering Salesman problem, Episode 4.
+# Solution to the Wandering Salesman problem, Episode 5, using libraries.
 #
 # Change to an iterative design
 #

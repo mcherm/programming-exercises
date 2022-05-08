@@ -38,10 +38,11 @@ Reasonable Execution time (#4):
 Reasonable Execution time (#5):
     Java: soft limit around 800000 (~30 seconds)
     JavaScript: soft limit around 2500000 (~30 seconds) [turns out it's already multi-threaded]
-    Python: soft limit around 500000 (~30 seconds)
+    Python: soft limit around 500000 (~30 seconds) [limit of only 250000 if we do it without a library]
     Rust: soft limit around 2500000 (~30 seconds)
 
 Reasonable Execution time in parallel (#6):
     Java: soft limit around 2000000 (~30 seconds)
     JavaScript: soft limit around 2500000 (~30 seconds)
+    Python: soft limit around 1000000 (~30 seconds, and only 1 million)
     Rust: soft limit around 10000000 (~30 seconds and yes, that's 10 million)
